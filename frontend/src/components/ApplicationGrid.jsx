@@ -14,6 +14,10 @@ const ApplicationGrid = ({ jobs, statusOptions, handleStatusChange , showAddForm
     Rejected: 'bg-red-100 text-red-800',
   };
 
+  const toggleDropdown = (id) => {
+    setOpenDropdownId(prevId => (prevId === id ? null : id));
+  };
+
   return (
     <div>
         {jobs.length === 0 && !showAddForm ? (
@@ -43,7 +47,7 @@ const ApplicationGrid = ({ jobs, statusOptions, handleStatusChange , showAddForm
                                 <button
                                     onClick={() => {
                                         handleDelete(job._id);
-                                        setOpenDropdownId(null); // close dropdown after delete
+                                        setOpenDropdownId(null); 
                                     }}
                                     className="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 w-full"
                                     >
