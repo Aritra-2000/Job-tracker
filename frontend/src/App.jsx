@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ApplicationForm } from "./components/applicationForm"
+import { ApplicationForm } from "./components/ApplicationForm"
 import ApplicationGrid from "./components/ApplicationGrid";
 import Navbar from "./components/Navbar"
 import { addApplication, deleteApplication, getApplication, updateApplication } from "./store/applicationSlice";
